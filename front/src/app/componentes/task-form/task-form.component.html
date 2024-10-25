@@ -1,0 +1,7 @@
+<p>task-form works!</p>
+
+<form (ngSubmit)="onSubmit(formulario)" #formulario="ngForm"> <!-- va aca el ngsubmit. #ngform es la instancia del form, podria pasar la instanci en el onsubmit para chequear si es valido el formulario-->
+    <input [(ngModel)]="this.nombre" id="nombre" name="nombre" placeholder="nombre de tarea" minlength="3" maxlength="50" required appTaken>
+    <input [(ngModel)]="this.duracion" id="duracion" name="duracion" placeholder="duracion" min="10" max="120" required>
+    <button >enviar</button>
+</form>

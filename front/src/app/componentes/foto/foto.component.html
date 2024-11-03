@@ -1,17 +1,17 @@
-<input type="file" (change)="fileChangeEvent($event)" />
+<input type="file" accept="image/*" (change)="fileChangeEvent($event)" />
 
 <image-cropper
     [imageChangedEvent]="imageChangedEvent"
     [maintainAspectRatio]="true"
     [aspectRatio]="4 / 3"
     format="png"
-  style="max-width: 35rem;"
+    style="max-width: 35rem"
     (imageCropped)="imageCropped($event)"
     (imageLoaded)="imageLoaded($event)"
     (cropperReady)="cropperReady()"
     (loadImageFailed)="loadImageFailed()"
 ></image-cropper>
-<ion-button>Subir</ion-button>
+<ion-button (click)="this.submitImage()">Subir</ion-button>
 
 <img [src]="croppedImage" />
-<img src="http://localhost/back/public/18965">
+<img src="http://localhost/back/public/shared_picture" />

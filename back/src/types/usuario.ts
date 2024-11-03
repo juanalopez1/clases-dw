@@ -29,6 +29,7 @@ export const UsuarioSchema = Type.Object(
     is_admin: Type.Boolean({
       description: "Indica si el usuario es administrador",
     }),
+    profilePictureUrl : Type.String()
   },
   {
     additionalProperties: false,

@@ -25,7 +25,6 @@ export class LoginPage {
 
   
   async onSubmit() {
-    console.log('jghfvjvhgbjhgbkbk  ');
     console.log(this.password);
     console.warn(this.profileForm.value);
 

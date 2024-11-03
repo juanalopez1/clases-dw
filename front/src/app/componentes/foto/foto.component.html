@@ -15,8 +15,7 @@
 ></image-cropper>
 <ion-button (click)="this.submitImage()">Subir</ion-button>
 
-<h4>Imagen que subiste:</h4>
-<img [src]="croppedImage" />
-<br>
-<h4>Imagen por defecto:</h4>
+<h4>Última imagen subida:</h4>
 <img src="http://localhost/back/public/shared_picture" />
+<img [src]="croppedImage" />
+<p>Recargar para actualizar</p>

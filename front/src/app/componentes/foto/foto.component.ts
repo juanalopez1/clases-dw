@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageCropperComponent, ImageCroppedEvent, LoadedImage } from 'ngx-image-cropper';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { IonButton, IonInput } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-foto',
   standalone: true,
-  imports: [ImageCropperComponent],
+  imports: [ImageCropperComponent, IonButton, IonInput],
   templateUrl: './foto.component.html',
 })
-export class FotoComponent {  
+export class FotoComponent {
 
   private _imageBlob : Blob | null | undefined = undefined;
 
   imageChangedEvent: Event | null = null;
     croppedImage: SafeUrl  = '';
-    
+
     constructor(
       private sanitizer: DomSanitizer
     ) {

@@ -5,12 +5,13 @@
     [maintainAspectRatio]="true"
     [aspectRatio]="4 / 3"
     format="png"
+  style="max-width: 35rem;"
     (imageCropped)="imageCropped($event)"
     (imageLoaded)="imageLoaded($event)"
     (cropperReady)="cropperReady()"
     (loadImageFailed)="loadImageFailed()"
 ></image-cropper>
+<ion-button>Subir</ion-button>
 
-<p>foto works!</p>
 <img [src]="croppedImage" />
 <img src="http://localhost/back/public/18965">

@@ -1,10 +1,8 @@
 import {
     fastifyMultipart,
     FastifyMultipartOptions,
-    MultipartFile,
 } from "@fastify/multipart";
 import fp from "fastify-plugin";
-import { ParsedFile } from "../types/file.js";
 
 export default fp<FastifyMultipartOptions>(async (fastify) => {
     await fastify.register(fastifyMultipart, {
@@ -15,18 +13,9 @@ export default fp<FastifyMultipartOptions>(async (fastify) => {
             fields: 30, // Max number of non-file fields
             // TODO: Fix hangups in 'large' files. We should also update the
             // checks function in the frontend whenever this value changes.
-            fileSize: 1024 * 10, // For multipart forms, the max file size in bytes
+            fileSize: 1024 * 1024 * 10, // For multipart forms, the max file size in bytes
             files: 1, // Max number of file fields
             parts: 1000, // For multipart forms, the max number of parts (fields + files)
-        },
-
-        async onFile(part) {
-            (part as MultipartFile & { value: ParsedFile }).value = {
-                toBuffer: part.toBuffer,
-                file: part.file,
-                filename: part.filename,
-                mimetype: part.mimetype,
-            };
         },
     });
 });

@@ -1,3 +1,5 @@
+<h1>Hola profe!</h1>
+<br>
 <input type="file" accept="image/*" (change)="fileChangeEvent($event)" />
 
 <image-cropper
@@ -13,5 +15,8 @@
 ></image-cropper>
 <ion-button (click)="this.submitImage()">Subir</ion-button>
 
+<h4>Imagen que subiste:</h4>
 <img [src]="croppedImage" />
+<br>
+<h4>Imagen por defecto:</h4>
 <img src="http://localhost/back/public/shared_picture" />

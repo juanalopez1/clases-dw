@@ -5,12 +5,17 @@ import { TaskIdPage } from './pages/tasks/components/task-id/task-id.page';
 import { LoginPage } from './pages/auth/login/login.page';
 import { logueadoGuard } from './guards/logueado.guard';
 import { NewTaskComponent } from './componentes/new-task/new-task.component';
+import { FotoComponent } from './componentes/foto/foto.component';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'image-cropper',
         pathMatch: 'full'
+    },
+    {
+        path: 'image-cropper',
+        component: FotoComponent
     },
     {
         path: 'home',

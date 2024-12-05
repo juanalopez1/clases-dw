@@ -6,6 +6,7 @@ import { LoginPage } from './pages/auth/login/login.page';
 import { logueadoGuard } from './guards/logueado.guard';
 import { NewTaskComponent } from './componentes/new-task/new-task.component';
 import { FotoComponent } from './componentes/foto/foto.component';
+import { PracticandoComponent } from './practicando/practicando.component';
 
 export const routes: Routes = [
     {
@@ -38,5 +39,9 @@ export const routes: Routes = [
         path: 'tasks/:id_tarea',
         component: TaskIdPage
     },
+    {
+        path: "practicando",
+        component: PracticandoComponent
+    }
 
 ]; 

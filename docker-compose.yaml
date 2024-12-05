@@ -13,6 +13,7 @@ services:
       - PGUSER=${PGUSER}
       - PGPASSWORD=${PGPASSWORD}
       - PGHOST=${PGHOST}
+      - psw=${psw}
   front:
     image: front
     container_name: front
